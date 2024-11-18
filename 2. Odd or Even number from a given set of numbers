@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int numbers[] = {10, 15, 22, 33, 40}; // Example set of numbers
+    int size = sizeof(numbers) / sizeof(numbers[0]);
+
+    printf("Even numbers: ");
+    for (int i = 0; i < size; i++) {
+        if (numbers[i] % 2 == 0) {
+            printf("%d ", numbers[i]);
+        }
+    }
+
+    printf("\nOdd numbers: ");
+    for (int i = 0; i < size; i++) {
+        if (numbers[i] % 2 != 0) {
+            printf("%d ", numbers[i]);
+        }
+    }
+
+    return 0;
+}
