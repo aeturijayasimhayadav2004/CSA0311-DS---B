@@ -1,0 +1,52 @@
+def array_operations():
+    arr = []  # Starting with an empty array
+    
+    # 1. Insert an element at a specific position
+    def insert(arr, element, position):
+        if position < 0 or position > len(arr):
+            print("Invalid position")
+        else:
+            arr.insert(position, element)
+    
+    # 2. Delete an element from a specific position
+    def delete(arr, position):
+        if position < 0 or position >= len(arr):
+            print("Invalid position")
+        else:
+            arr.pop(position)
+    
+    # 3. Update an element at a specific position
+    def update(arr, position, new_element):
+        if position < 0 or position >= len(arr):
+            print("Invalid position")
+        else:
+            arr[position] = new_element
+    
+    # 4. Search for an element in the array
+    def search(arr, element):
+        if element in arr:
+            return arr.index(element)
+        else:
+            return -1  # Element not found
+    
+    # 5. Display the array
+    def display(arr):
+        print("Array:", arr)
+    
+    # Example of using the functions
+    insert(arr, 5, 0)      # Insert 5 at position 0
+    insert(arr, 10, 1)     # Insert 10 at position 1
+    insert(arr, 15, 2)     # Insert 15 at position 2
+    display(arr)           # Display: [5, 10, 15]
+    
+    update(arr, 1, 20)     # Update position 1 with value 20
+    display(arr)           # Display: [5, 20, 15]
+    
+    delete(arr, 0)         # Delete element at position 0
+    display(arr)           # Display: [20, 15]
+    
+    index = search(arr, 15) # Search for 15
+    print("Index of 15:", index)  # Display: 1
+
+# Run the array operations example
+array_operations()
