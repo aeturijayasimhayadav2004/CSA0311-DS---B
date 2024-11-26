@@ -1,0 +1,28 @@
+def stack_operations():
+    stack = []  # Initialize an empty stack
+    
+    # Push operation
+    stack.append(10)
+    print("After push 10:", stack)
+    stack.append(20)
+    print("After push 20:", stack)
+    
+    # Pop operation
+    if stack:
+        popped = stack.pop()
+        print(f"Popped element: {popped}")
+    else:
+        print("Stack is empty, cannot pop.")
+    print("After pop operation:", stack)
+    
+    # Peek operation
+    if stack:
+        print("Top element (peek):", stack[-1])
+    else:
+        print("Stack is empty, nothing to peek.")
+    
+    # Display stack
+    print("Stack contents:", stack)
+
+# Call the function
+stack_operations()
